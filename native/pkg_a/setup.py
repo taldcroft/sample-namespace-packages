@@ -18,7 +18,7 @@ from setuptools import setup
 setup(
     name='example_pkg_a',
 
-    version='1',
+    version='1.3',
 
     description='',
     long_description='',
@@ -28,6 +28,7 @@ setup(
 
     license='Apache Software License',
 
-    packages=['example_pkg.a'],
+    packages=['example_pkg_a', 'example_pkg.a'],
+    package_dir={'example_pkg.a': 'example_pkg_a', 'example_pkg_a': 'example_pkg_a'},
     zip_safe=False,
 )
